@@ -1,10 +1,12 @@
-var createServer = require('./server')
+var createServer = require("./server");
 
-var env = process.env.NODE_ENV || 'development'
+var environment = process.env.NODE_ENV || "development";
+var dbConfig = require("../knexfile")[environment];
+var connection = require("knex")(dbConfig);
 
-var server = createServer()
-var PORT = process.env.PORT || 3000
+var server = createServer(connection);
 
-server.listen(PORT, function () {
-  console.log('Listening on port', PORT)
-})
+var PORT = process.env.PORT || 3000;
+server.listen(PORT, function() {
+  console.log("Listening on port", PORT);
+});

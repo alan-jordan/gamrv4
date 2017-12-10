@@ -1,6 +1,6 @@
-var path = require("path");
-var express = require("express");
-var bodyParser = require("body-parser");
+const path = require("path");
+const express = require("express");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const corsOptions = {
@@ -10,12 +10,12 @@ const corsOptions = {
   credentials: true
 };
 
-var server = express();
-server.use(cors(corsOptions));
+const app = express();
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "../public")));
 
-server.use(bodyParser.json());
-server.use(express.static(path.join(__dirname, "../public")));
-
-module.exports = function() {
-  return server;
+module.exports = connection => {
+  app.set("connection", connection);
+  return app;
 };

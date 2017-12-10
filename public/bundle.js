@@ -3333,7 +3333,7 @@ var _store = __webpack_require__(86);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _App = __webpack_require__(116);
+var _App = __webpack_require__(89);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -22503,7 +22503,67 @@ var _redux = __webpack_require__(16);
 exports.default = (0, _redux.combineReducers)({});
 
 /***/ }),
-/* 89 */,
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(90);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react2.default.createElement(
+    _reactRouterDom.HashRouter,
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "app-container" },
+      _react2.default.createElement(
+        "form",
+        { action: "/login", method: "post" },
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement(
+            "label",
+            null,
+            "Username:"
+          ),
+          _react2.default.createElement("input", { type: "text", name: "username" })
+        ),
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement(
+            "label",
+            null,
+            "Password:"
+          ),
+          _react2.default.createElement("input", { type: "password", name: "password" })
+        ),
+        _react2.default.createElement(
+          "div",
+          null,
+          _react2.default.createElement("input", { type: "submit", value: "Log In" })
+        )
+      )
+    )
+  );
+};
+
+exports.default = App;
+
+/***/ }),
 /* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25520,43 +25580,6 @@ var withRouter = function withRouter(Component) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(90);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App() {
-  return _react2.default.createElement(
-    _reactRouterDom.HashRouter,
-    null,
-    _react2.default.createElement(
-      'div',
-      { className: 'app-container' },
-      _react2.default.createElement(
-        'h1',
-        null,
-        'Hello'
-      )
-    )
-  );
-};
-
-exports.default = App;
 
 /***/ })
 /******/ ]);

@@ -1,1 +1,2 @@
-export const findUser = email => {};
+export const findUserByEmail = email =>
+  connection("users").where("email", email);

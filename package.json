@@ -5,7 +5,7 @@
   "repository": "https://github.com/alan.jordan/gamrv4",
   "main": "server/index.js",
   "scripts": {
-    "knex":"knex",
+    "knex": "knex",
     "dev": "nodemon --watch server server/index & webpack --watch",
     "start": "node server/index",
     "test": "jest",
@@ -25,6 +25,7 @@
     "jest": "^21.2.1",
     "jsdom": "^11.0.0",
     "jsx-loader": "^0.13.2",
+    "mock-knex": "^0.4.0",
     "nodemon": "^1.11.0",
     "react-test-renderer": "^16.2.0",
     "sqlite": "^2.9.0",

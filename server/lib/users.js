@@ -1,7 +1,7 @@
-export const findUserByEmail = (connection, email) => {
+export const findUserByEmail = (connection, user_email) => {
   return connection("users")
-    .where("user_email", email)
-    .on("query-error", (err, obj) => {
+    .where("user_email", user_email)
+    .catch(err => {
       return new Error(`Error: ${err}`);
     });
 };

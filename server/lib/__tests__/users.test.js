@@ -28,6 +28,13 @@ describe("testing findUserByEmail", () => {
     });
   });
   it("should throw an error when no connection is available", () => {
-    expect(() => findUserByEmail(noconnection, "test")).toThrowError();
+    let brokenConnection = knex(config);
+    brokenConnection.destroy().then(async () => {
+      await findUserByEmail(brokenConnection, "test").then(err => {
+        expect(err).toMatchObject(
+          new Error(`Error: Error: Unable to acquire a connection`)
+        );
+      });
+    });
   });
 });

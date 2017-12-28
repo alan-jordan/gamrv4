@@ -13,6 +13,9 @@
   },
   "author": "EDA",
   "license": "ISC",
+  "jest": {
+    "coveragePathIgnorePatterns": ["node_modules/", "migrations/", "seeds/"]
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-jest": "^21.2.0",

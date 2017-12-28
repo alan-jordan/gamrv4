@@ -22,11 +22,13 @@ describe("testing findUserByEmail", () => {
       expect(data[0].user_surname).toBe("Jordan");
     });
   });
+
   it("should error return an emptry array when a user is not found", () => {
     return findUserByEmail(connection, "alordan@gmail.com").then(data => {
       expect(data[0]).toBeFalsy();
     });
   });
+
   it("should throw an error when no connection is available", () => {
     let brokenConnection = knex(config);
     brokenConnection.destroy().then(async () => {

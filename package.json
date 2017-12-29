@@ -1,7 +1,7 @@
 {
   "name": "gamr",
   "version": "0.1.1",
-  "description": "Ga,r",
+  "description": "Gamr",
   "repository": "https://github.com/alan.jordan/gamrv4",
   "main": "server/index.js",
   "scripts": {
@@ -14,7 +14,11 @@
   "author": "EDA",
   "license": "ISC",
   "jest": {
-    "coveragePathIgnorePatterns": ["node_modules/", "migrations/", "seeds/"]
+    "coveragePathIgnorePatterns": [
+      "node_modules/",
+      "migrations/",
+      "seeds/"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -36,10 +40,15 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "cors": "^2.8.3",
     "express": "^4.14.0",
+    "express-session": "^1.15.6",
     "knex": "^0.14.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "pg": "^7.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
